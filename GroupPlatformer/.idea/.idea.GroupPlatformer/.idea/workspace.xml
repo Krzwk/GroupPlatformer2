@@ -3,6 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="28222aad-0a57-449d-95c7-4d2e05b69e73" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.GroupPlatformer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GroupPlatformer/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/DoorActivator/BigDoor/BigDoorOpen.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/DoorActivator/BigDoor/BigDoorOpen.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/DoorActivator/BigDoor/BigDoorTrigger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/DoorActivator/BigDoor/BigDoorTrigger.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,8 +28,8 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/WallWithButton/ButtonTrigger.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/DoorActivator/OpenColoredDoors.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/DoorActivator/OpenDoor.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/DoorActivator/BigDoor/BigDoorOpen.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/DoorActivator/BigDoor/BigDoorTrigger.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/DoorActivator/BigDoor/BigDoorOpen.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1oRKPZsu5NWzheAxd0pm3IF2eXg" />
@@ -77,7 +79,7 @@
       <workItem from="1613311832151" duration="2734000" />
       <workItem from="1613318182792" duration="1000" />
       <workItem from="1613318220147" duration="63000" />
-      <workItem from="1613318304853" duration="1410000" />
+      <workItem from="1613318304853" duration="3073000" />
     </task>
     <servers />
   </component>

@@ -19,6 +19,7 @@ public class BigDoorOpen : MonoBehaviour
 
     private void Update()
     {
+
         if (checkIfColorSequenceIsOk())
         {
             // open big door
@@ -29,36 +30,8 @@ public class BigDoorOpen : MonoBehaviour
 
     bool checkIfColorSequenceIsOk()
     {
-        // start from the last button that should be pressed and check if other buttons have been pressed
-        if (orange) {
-            if (purple) {
-                if (black) {
-                    if (blue) {
-                        if(green) {
-                            // open the big door
-                            Debug.Log("Big door opens!");
-                            return true;
-                        } else
-                        {
-                            resetSequence();
-                            return false;
-                        }
-                    } else {
-                        resetSequence();
-                        return false;
-                    }
-                } else {
-                    resetSequence();
-                    return false;
-                }
-            } else {
-                resetSequence();
-                return false;
-            }
-        } else {
-            resetSequence();
-            return false;
-        }
+        // Todo
+        return false;
     }
 
     void resetSequence()
