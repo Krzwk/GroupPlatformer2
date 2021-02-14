@@ -170,6 +170,12 @@ public class PlayerBehaviour : MonoBehaviour
             OnDeath();
         }
 
+        if (other.gameObject.tag == "GoToLvl2Trigger")
+        {
+            SceneManager.LoadScene("Level 2");
+        }
+        
+
     }
     public void setCheckpoint(Checkpoints checkpoint){
         spawnpoint = checkpoint.transform;
