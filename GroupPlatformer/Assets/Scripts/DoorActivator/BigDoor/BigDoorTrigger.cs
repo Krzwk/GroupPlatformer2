@@ -38,8 +38,9 @@ public class BigDoorTrigger : MonoBehaviour
             }
         }
         
-        Debug.Log("blue: " + BigDoorOpen.blue + 
-        "black: " + BigDoorOpen.black + "purple: " + BigDoorOpen.purple + "orange: " + BigDoorOpen.orange + "green: " + BigDoorOpen.green);
+        Debug.Log("blue: " + BigDoorOpen.blue + "\n" +
+        "black: " + BigDoorOpen.black + "\n" + "purple: " + BigDoorOpen.purple  + "\n" + 
+        "orange: " + BigDoorOpen.orange + "\n" + "green: " + BigDoorOpen.green);
         
     }
 }
