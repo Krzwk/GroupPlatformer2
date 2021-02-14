@@ -13,9 +13,9 @@ public class Boss : AdvancedEnemy
     [SerializeField]
     private float timeSincePlayerSeen;
     [SerializeField]
-    private float maxHealth;
+    private int maxHealth;
     [SerializeField]
-    private float health;
+    private int health;
     private bool invincible;
     [SerializeField]
     private float stunTime;
@@ -139,7 +139,7 @@ public class Boss : AdvancedEnemy
     public void OnHit(int hpLoss){
         if (!invincible){
         health -= hpLoss;
-        if (health < 2*maxHealth / 3 && bossBehaviour != Behaviour.SearchAndSpawn){
+        if (health < 2*maxHealth / 3 && bossBehaviour != Behaviour.SearchAndSpawn && bossBehaviour != Behaviour.PatrolAndShoot){
             normalSpeed = baseNormalSpeed;
             charging = false;
             StartCoroutine(SwitchPhase(Behaviour.SearchAndSpawn));
@@ -176,7 +176,9 @@ public class Boss : AdvancedEnemy
 
     new private void OnDeath(){
         Instantiate(explosionPrefab, transform.position, transform.rotation);
-        Destroy(gameObject);
+        healthBar.GetComponentInParent<Image>().enabled = false;
+        healthBar.GetComponent<Image>().enabled = false;
+        Destroy(gameObject,1.0f);
     }
 
     IEnumerator Hit(){
@@ -190,7 +192,7 @@ public class Boss : AdvancedEnemy
     }
 
     private void UpdateHealthbar(){
-        healthBar.transform.localScale = new Vector3 (health/maxHealth, healthBar.transform.localScale.y, healthBar.transform.localScale.z);
+        healthBar.transform.localScale = new Vector3 ((health*1.0f)/(maxHealth*1.0f), healthBar.transform.localScale.y, healthBar.transform.localScale.z);
     }
 
     private void Charge(Vector3 targetPosition){
