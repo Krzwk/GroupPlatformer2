@@ -41,6 +41,7 @@ public class Boss : AdvancedEnemy
     private float liftoffHeight;
     [SerializeField]
     private GameObject enemyPrefab;
+    private bool shooting;
     [SerializeField]
     private GameObject dartPrefab;
     private float baseWeaponCooldown;
@@ -53,7 +54,7 @@ public class Boss : AdvancedEnemy
     new void Awake(){
         base.Awake();
         liftoffHeight += this.transform.position.y;
-        invincible = spawning = false;
+        invincible = spawning = shooting = false;
         healthBar.transform.parent.GetComponent<Image>().enabled = true;
         healthBar.GetComponent<Image>().enabled = true;
         timeSincePlayerSeen = 0;
@@ -88,7 +89,7 @@ public class Boss : AdvancedEnemy
 
                             if(weaponCooldown <= 0){
                                 
-                                Instantiate(dartPrefab, this.transform.position + this.gameObject.GetComponent<Collider>().bounds.extents.x * Vector3.forward, this.transform.rotation); 
+                                Instantiate(dartPrefab, this.transform.position, this.transform.rotation); 
                                 weaponCooldown = baseWeaponCooldown;
                             }
 
@@ -96,14 +97,14 @@ public class Boss : AdvancedEnemy
                         
                         else{
                                 Vector3 target = prey.transform.position - transform.position;
-                                transform.rotation = Quaternion.LookRotation(Vector3.RotateTowards(transform.forward, target, rotationSpeed*Time.deltaTime, 10f));
+                                transform.rotation = Quaternion.LookRotation(Vector3.RotateTowards(transform.forward, target, 1f*Time.deltaTime, 10f));
 
                         }
                     }
                     else{
                         PatternMovement();
                         timeSincePlayerSeen += Time.deltaTime;
-                        if (timeSincePlayerSeen > 4){
+                        if (timeSincePlayerSeen > 4 && !shooting){
                             StartCoroutine(ShootBlindly());
                             timeSincePlayerSeen = 0;
                         }
@@ -245,6 +246,17 @@ public class Boss : AdvancedEnemy
             AdvancedEnemy spawnedMinion = minion.GetComponent<AdvancedEnemy>();
             spawnedMinion.prey = this.prey;
             health -= 1;
+            if (health < 2*maxHealth / 3 && bossBehaviour != Behaviour.SearchAndSpawn){
+                normalSpeed = baseNormalSpeed;
+                charging = false;
+                StartCoroutine(SwitchPhase(Behaviour.SearchAndSpawn));
+                }
+            else if (health < maxHealth / 3 && bossBehaviour != Behaviour.PatrolAndShoot){
+                StartCoroutine(SwitchPhase(Behaviour.PatrolAndShoot));
+            }
+            if (health <= 0){
+                OnDeath();
+            }
             UpdateHealthbar();
             spawned++;
             yield return new WaitForSeconds(2);
@@ -270,14 +282,16 @@ public class Boss : AdvancedEnemy
     }
 
     private IEnumerator ShootBlindly(){
+        shooting = true;
         for (int dartsFired = 0; dartsFired < 36&& !PlayerVisible(prey.transform.position); dartsFired++){
                 Instantiate(dartPrefab, this.transform.position + this.gameObject.GetComponent<Collider>().bounds.extents.x * Vector3.forward, this.transform.rotation); 
                 for (float rotationAroundSelf = 0; rotationAroundSelf < 10 && !PlayerVisible(prey.transform.position); rotationAroundSelf += Time.deltaTime*rotationSpeed){
-                    this.transform.Rotate(0, Time.deltaTime*rotationSpeed*10, 0, Space.Self);
+                    this.transform.Rotate(0, Time.deltaTime*rotationSpeed, 0, Space.Self);
                     yield return null;
                 }
                 yield return null;
         }
+        shooting = false;
     }
         
 }

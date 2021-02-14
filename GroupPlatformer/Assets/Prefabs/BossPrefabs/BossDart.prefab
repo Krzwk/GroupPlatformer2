@@ -109,5 +109,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 014fa031cd2818348826e79d6a58781b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dartSpeed: 40
+  dartSpeed: 20
   explosionPrefab: {fileID: 3226507154533238471, guid: c99fba79770d47546bc8fd7eef18e654, type: 3}

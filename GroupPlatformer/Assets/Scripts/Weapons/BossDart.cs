@@ -36,6 +36,6 @@ public class BossDart : MonoBehaviour
             Destroy(gameObject);
         }
         else if (!other.gameObject.CompareTag("Boss"))
-            Destroy(this.gameObject);
+            Destroy(gameObject);
     }
 }

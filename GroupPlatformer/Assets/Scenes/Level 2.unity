@@ -434,9 +434,9 @@ MonoBehaviour:
   - {fileID: 2018366420}
   - {fileID: 1184868759}
   distanceThreshold: 1
+  timeSincePlayerSeen: 0
   maxHealth: 0
   health: 100
-  invincible: 0
   stunTime: 3
   explosionPrefab: {fileID: 3226507154533238471, guid: c99fba79770d47546bc8fd7eef18e654, type: 3}
   healthBar: {fileID: 1632905599}
@@ -447,7 +447,7 @@ MonoBehaviour:
   enemyPrefab: {fileID: 4569106199213117529, guid: 77e2b0d0dbcbc304e9ee920c83496232, type: 3}
   dartPrefab: {fileID: 8351657815220547459, guid: 1f7273715f1eba44582ca00b163ac576, type: 3}
   weaponCooldown: 4
-  rotationSpeed: 1
+  rotationSpeed: 40
 --- !u!54 &317562188
 Rigidbody:
   m_ObjectHideFlags: 0
