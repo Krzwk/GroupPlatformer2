@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="28222aad-0a57-449d-95c7-4d2e05b69e73" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.GroupPlatformer/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GroupPlatformer/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/DoorActivator/BigDoor/BigDoorOpen.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/DoorActivator/BigDoor/BigDoorOpen.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,7 +72,7 @@
       <updated>1613243943290</updated>
       <workItem from="1613243951961" duration="1525000" />
       <workItem from="1613249201790" duration="3131000" />
-      <workItem from="1613311832151" duration="514000" />
+      <workItem from="1613311832151" duration="878000" />
     </task>
     <servers />
   </component>

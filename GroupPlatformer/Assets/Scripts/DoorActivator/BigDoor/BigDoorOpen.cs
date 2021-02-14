@@ -11,11 +11,14 @@ public class BigDoorOpen : MonoBehaviour
     private bool purple;    // 4. button to be pressed
     private bool orange;    // 5. button to be pressed
 
+    [SerializeField]
+    private Transform bigDoor;
+    
     private void Update()
     {
-        if (checkIfColorSequenceIsOk)
+        if (checkIfColorSequenceIsOk())
         {
-            // 
+            // open big door
         }
     }
 
