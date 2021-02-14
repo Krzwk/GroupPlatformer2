@@ -330,6 +330,21 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c1598427526290e47a3e1ba10647178c, type: 3}
+--- !u!4 &103310527 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3747328043825068262, guid: 400052fb425cfcf40af55928e106c44a, type: 3}
+  m_PrefabInstance: {fileID: 6102991501370722964}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &131849860 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3747328043825068262, guid: 400052fb425cfcf40af55928e106c44a, type: 3}
+  m_PrefabInstance: {fileID: 2096021592}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &302313750 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3747328043825068262, guid: 400052fb425cfcf40af55928e106c44a, type: 3}
+  m_PrefabInstance: {fileID: 789111521}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &339814046
 GameObject:
   m_ObjectHideFlags: 0
@@ -376,7 +391,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3b8ee1141d534a46b34d748b451bd7d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  positionDoor: {fileID: 426467327}
+  positionDoor: {fileID: 131849860}
   cubeColor: BlackActivatorCube
 --- !u!65 &339814049
 BoxCollider:
@@ -711,7 +726,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3b8ee1141d534a46b34d748b451bd7d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  positionDoor: {fileID: 426467327}
+  positionDoor: {fileID: 760995116}
   cubeColor: GreenActivatorCube
 --- !u!65 &512639495
 BoxCollider:
@@ -1021,7 +1036,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3b8ee1141d534a46b34d748b451bd7d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  positionDoor: {fileID: 426467327}
+  positionDoor: {fileID: 103310527}
   cubeColor: PurpleActivatorCube
 --- !u!65 &693114252
 BoxCollider:
@@ -1099,6 +1114,11 @@ Transform:
   m_Father: {fileID: 349559855}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &760995116 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3747328043825068262, guid: 400052fb425cfcf40af55928e106c44a, type: 3}
+  m_PrefabInstance: {fileID: 1664348639}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &775391654
 GameObject:
   m_ObjectHideFlags: 0
@@ -1218,6 +1238,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0.243
       objectReference: {fileID: 0}
+    - target: {fileID: 3687522737727872509, guid: 400052fb425cfcf40af55928e106c44a, type: 3}
+      propertyPath: m_Name
+      value: OrangeDoor
+      objectReference: {fileID: 0}
     - target: {fileID: 3965163362183129744, guid: 400052fb425cfcf40af55928e106c44a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -1232,35 +1256,35 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6102991499347308787, guid: 400052fb425cfcf40af55928e106c44a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.9125433
+      value: -4.9125443
       objectReference: {fileID: 0}
     - target: {fileID: 6102991499347308787, guid: 400052fb425cfcf40af55928e106c44a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.0035715
+      value: 3.2811728
       objectReference: {fileID: 0}
     - target: {fileID: 6102991499347308787, guid: 400052fb425cfcf40af55928e106c44a, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 4.8160286
+      value: 5.0613556
       objectReference: {fileID: 0}
     - target: {fileID: 6102991499347308787, guid: 400052fb425cfcf40af55928e106c44a, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6102991499347308787, guid: 400052fb425cfcf40af55928e106c44a, type: 3}
-      propertyPath: m_LocalRotation.x
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6102991499347308787, guid: 400052fb425cfcf40af55928e106c44a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6102991499347308787, guid: 400052fb425cfcf40af55928e106c44a, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6102991499347308787, guid: 400052fb425cfcf40af55928e106c44a, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6102991499347308787, guid: 400052fb425cfcf40af55928e106c44a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 180
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6102991499347308787, guid: 400052fb425cfcf40af55928e106c44a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
@@ -1475,7 +1499,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3b8ee1141d534a46b34d748b451bd7d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  positionDoor: {fileID: 426467327}
+  positionDoor: {fileID: 1596506036}
   cubeColor: BlueActivatorCube
 --- !u!65 &975397693
 BoxCollider:
@@ -1598,6 +1622,10 @@ PrefabInstance:
       propertyPath: cube
       value: 
       objectReference: {fileID: 8035212689062343789, guid: a868adf00ff72e742834ebccd77bf5a4, type: 3}
+    - target: {fileID: 7200277101820710297, guid: 8119186871c63224eae60b5a3cc6b7e4, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -2.57
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8119186871c63224eae60b5a3cc6b7e4, type: 3}
 --- !u!1 &1092953370
@@ -2535,7 +2563,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3b8ee1141d534a46b34d748b451bd7d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  positionDoor: {fileID: 426467327}
+  positionDoor: {fileID: 302313750}
   cubeColor: OrangeActivatorCube
 --- !u!65 &1516322909
 BoxCollider:
@@ -2803,6 +2831,11 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1571679519}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &1596506036 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3747328043825068262, guid: 400052fb425cfcf40af55928e106c44a, type: 3}
+  m_PrefabInstance: {fileID: 2127868860}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1601148778
 GameObject:
   m_ObjectHideFlags: 0
@@ -2918,6 +2951,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 7ab9b6cbffca9014abda5a250e15cd46, type: 2}
+    - target: {fileID: 3687522737727872509, guid: 400052fb425cfcf40af55928e106c44a, type: 3}
+      propertyPath: m_Name
+      value: GreenDoor
+      objectReference: {fileID: 0}
     - target: {fileID: 3965163362183129744, guid: 400052fb425cfcf40af55928e106c44a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -3615,6 +3652,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: e7a4a36738fb92f4db72b613d716d5db, type: 2}
+    - target: {fileID: 3687522737727872509, guid: 400052fb425cfcf40af55928e106c44a, type: 3}
+      propertyPath: m_Name
+      value: BlackDoor
+      objectReference: {fileID: 0}
     - target: {fileID: 3965163362183129744, guid: 400052fb425cfcf40af55928e106c44a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -3680,6 +3721,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 0429e956cdc6409459feb07ecb52ee60, type: 2}
+    - target: {fileID: 3687522737727872509, guid: 400052fb425cfcf40af55928e106c44a, type: 3}
+      propertyPath: m_Name
+      value: BlueDoor
+      objectReference: {fileID: 0}
     - target: {fileID: 6102991499347308786, guid: 400052fb425cfcf40af55928e106c44a, type: 3}
       propertyPath: m_Name
       value: BlueRoomWithButtons (4)
