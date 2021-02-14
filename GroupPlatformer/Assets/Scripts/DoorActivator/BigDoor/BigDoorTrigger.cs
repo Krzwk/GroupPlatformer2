@@ -1,18 +1,35 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using UnityEditorInternal;
 using UnityEngine;
 
-public class NewBehaviourScript : MonoBehaviour
+public class BigDoorTrigger : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    private String color;
+    
+    private void OnCollisionEnter(Collision other)
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        if (other.collider.CompareTag("Button"))
+        {
+            switch (color)
+            {
+                case "blue":
+                    BigDoorOpen.blue = true;
+                    break;
+                case "black":
+                    BigDoorOpen.black = true;
+                    break;
+                case "purple":
+                    BigDoorOpen.purple = true;
+                    break;
+                case "orange":
+                    BigDoorOpen.orange = true;
+                    break;
+                case "green":
+                    BigDoorOpen.green = true;
+                    break;
+            }
+        }
     }
 }
