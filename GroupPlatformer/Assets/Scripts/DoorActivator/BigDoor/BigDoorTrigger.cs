@@ -6,6 +6,7 @@ using UnityEngine;
 
 public class BigDoorTrigger : MonoBehaviour
 {
+    [SerializeField]
     private String color;
     
     private void OnCollisionEnter(Collision other)
@@ -16,18 +17,23 @@ public class BigDoorTrigger : MonoBehaviour
             {
                 case "blue":
                     BigDoorOpen.blue = true;
+                    Debug.Log("blue is now true");
                     break;
                 case "black":
                     BigDoorOpen.black = true;
+                    Debug.Log("black is now true");
                     break;
                 case "purple":
                     BigDoorOpen.purple = true;
+                    Debug.Log("purple is now true");
                     break;
                 case "orange":
                     BigDoorOpen.orange = true;
+                    Debug.Log("orange is now true");
                     break;
                 case "green":
                     BigDoorOpen.green = true;
+                    Debug.Log("green is now true");
                     break;
             }
         }
