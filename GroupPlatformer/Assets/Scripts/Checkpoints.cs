@@ -8,6 +8,7 @@ public class Checkpoints : MonoBehaviour
         if(other.gameObject.tag == "Player"){
             PlayerBehaviour player = other.gameObject.GetComponent<PlayerBehaviour>();
             player.setCheckpoint(this);
+            player.jumpAllowed = false;
         }
     }    
 }

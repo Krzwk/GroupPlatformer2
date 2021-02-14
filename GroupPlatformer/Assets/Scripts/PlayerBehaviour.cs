@@ -47,6 +47,7 @@ public class PlayerBehaviour : MonoBehaviour
     private GameObject reloadBar;
     public MoveSettings moveSettings;
     public InputSettings inputSettings;
+    public bool jumpAllowed = true;
 
     private Rigidbody playerRigidbody;
     private Vector3 velocity;
@@ -130,7 +131,7 @@ public class PlayerBehaviour : MonoBehaviour
     }
     void Jump()
     {
-        if (jumpInput != 0 && Grounded())
+        if (jumpAllowed && (jumpInput != 0 && Grounded()))
         {
             playerRigidbody.velocity = new Vector3(playerRigidbody.velocity.x, moveSettings.jumpVelocity, playerRigidbody.velocity.z);
         }

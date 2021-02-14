@@ -9,7 +9,7 @@ public class ButtonBehaviour : MonoBehaviour
     private Transform initialPlace;
 
     private float timer = 0.0f;
-    private float waitingTime = 1.5f;
+    private float waitingTime = 2.5f;
     
     private void Update()
     {

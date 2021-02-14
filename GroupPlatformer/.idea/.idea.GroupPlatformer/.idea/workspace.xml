@@ -2,8 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="28222aad-0a57-449d-95c7-4d2e05b69e73" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.GroupPlatformer/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GroupPlatformer/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.GroupPlatformer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GroupPlatformer/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/DoorActivator/BigDoor/BigDoorOpen.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/DoorActivator/BigDoor/BigDoorOpen.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level 1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level 1.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Checkpoints.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Checkpoints.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerBehaviour.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/WallWithButton/ButtonBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/WallWithButton/ButtonBehaviour.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,12 +27,14 @@
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
-      <option value="$PROJECT_DIR$/Assets/Scripts/WallWithButton/ButtonBehaviour.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/WallWithButton/ButtonTrigger.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/DoorActivator/OpenColoredDoors.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/DoorActivator/OpenDoor.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/DoorActivator/BigDoor/BigDoorTrigger.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/DoorActivator/BigDoor/BigDoorOpen.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/WallWithButton/ButtonBehaviour.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/PlayerBehaviour.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Checkpoints.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1oRKPZsu5NWzheAxd0pm3IF2eXg" />
@@ -78,7 +84,9 @@
       <workItem from="1613311832151" duration="2734000" />
       <workItem from="1613318182792" duration="1000" />
       <workItem from="1613318220147" duration="63000" />
-      <workItem from="1613318304853" duration="8436000" />
+      <workItem from="1613318304853" duration="9184000" />
+      <workItem from="1613333455418" duration="10000" />
+      <workItem from="1613333617664" duration="467000" />
     </task>
     <servers />
   </component>
