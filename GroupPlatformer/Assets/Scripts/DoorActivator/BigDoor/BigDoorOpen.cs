@@ -25,12 +25,14 @@ public class BigDoorOpen : MonoBehaviour
     private void Update()
     {
 
+        checkCurrentSequence();
+        
         if (!checkCurrentSequence())
         {
             resetSequence();
         }
         
-        if (green && blue && black && purple && orange)
+        if (checkCurrentSequence() && green && blue && black && purple && orange)
         {
             // open big door
             if (bigDoor.position.y <= 10.0f)
