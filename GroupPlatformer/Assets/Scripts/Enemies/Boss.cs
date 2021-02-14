@@ -8,12 +8,13 @@ public class Boss : AdvancedEnemy
 
 
     private float baseNormalSpeed;
+    [SerializeField]
     private float timeSincePlayerSeen;
     [SerializeField]
     private float maxHealth;
     [SerializeField]
     private float health;
-    public bool invincible;
+    private bool invincible;
     [SerializeField]
     private float stunTime;
     public GameObject explosionPrefab;
@@ -101,8 +102,9 @@ public class Boss : AdvancedEnemy
                     }
                     else{
                         PatternMovement();
-                        if (timeSincePlayerSeen > 8){
-                            ShootBlindly();
+                        timeSincePlayerSeen += Time.deltaTime;
+                        if (timeSincePlayerSeen > 4){
+                            StartCoroutine(ShootBlindly());
                             timeSincePlayerSeen = 0;
                         }
                     }
@@ -126,8 +128,11 @@ public class Boss : AdvancedEnemy
     }
 
     public void OnHit(int hpLoss){
+        if (!invincible){
         health -= hpLoss;
         if (health < 2*maxHealth / 3 && bossBehaviour != Behaviour.SearchAndSpawn){
+            normalSpeed = baseNormalSpeed;
+            charging = false;
             StartCoroutine(SwitchPhase(Behaviour.SearchAndSpawn));
         }
         else if (health < maxHealth / 3 && bossBehaviour != Behaviour.PatrolAndShoot){
@@ -139,6 +144,7 @@ public class Boss : AdvancedEnemy
         invincible = true;
         UpdateHealthbar();
         StartCoroutine(Hit());
+        }
     }
 
     private IEnumerator SwitchPhase(Behaviour phase){
@@ -165,7 +171,12 @@ public class Boss : AdvancedEnemy
     }
 
     IEnumerator Hit(){
-        yield return new WaitForSeconds(3);
+        for (int i = 0; i < 5; i++){
+            this.gameObject.GetComponent<Renderer>().enabled = false;
+            yield return new WaitForSeconds(0.1f);
+            this.gameObject.GetComponent<Renderer>().enabled = true;
+            yield return new WaitForSeconds(0.2f);
+            }
         invincible = false;
     }
 
@@ -259,10 +270,10 @@ public class Boss : AdvancedEnemy
     }
 
     private IEnumerator ShootBlindly(){
-        for (int dartsFired = 0; dartsFired < 36; dartsFired++){
+        for (int dartsFired = 0; dartsFired < 36&& !PlayerVisible(prey.transform.position); dartsFired++){
                 Instantiate(dartPrefab, this.transform.position + this.gameObject.GetComponent<Collider>().bounds.extents.x * Vector3.forward, this.transform.rotation); 
-                for (float rotationAroundSelf = 0; rotationAroundSelf < 10; rotationAroundSelf += Time.deltaTime*rotationSpeed){
-                    this.transform.Rotate(0, Time.deltaTime*rotationSpeed, 0, Space.Self);
+                for (float rotationAroundSelf = 0; rotationAroundSelf < 10 && !PlayerVisible(prey.transform.position); rotationAroundSelf += Time.deltaTime*rotationSpeed){
+                    this.transform.Rotate(0, Time.deltaTime*rotationSpeed*10, 0, Space.Self);
                     yield return null;
                 }
                 yield return null;

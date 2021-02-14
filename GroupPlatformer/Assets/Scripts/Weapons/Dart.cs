@@ -32,9 +32,7 @@ public class Dart : MonoBehaviour
         else if (other.gameObject.CompareTag("Boss"))
         {
             Boss boss = other.gameObject.GetComponent<Boss>();
-            if(!boss.invincible){
-                boss.OnHit(10);
-                }
+            boss.OnHit(10);
             Instantiate(explosionPrefab, transform.position, transform.rotation);
             Destroy(gameObject);
         }
