@@ -193,6 +193,7 @@ public class PlayerBehaviour : MonoBehaviour
         }
         else if (collision.gameObject.CompareTag("Boss")){
             Boss boss = collision.gameObject.GetComponent<Boss>();
+            boss.SetToSpawn();
             OnDeath();
         }
     }

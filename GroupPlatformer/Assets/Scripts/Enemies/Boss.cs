@@ -6,6 +6,8 @@ using UnityEngine.UI;
 public class Boss : AdvancedEnemy
 {
 
+    private Vector3 spawnPosition;
+
 
     private float baseNormalSpeed;
     [SerializeField]
@@ -59,6 +61,7 @@ public class Boss : AdvancedEnemy
         healthBar.GetComponent<Image>().enabled = true;
         timeSincePlayerSeen = 0;
         bossBehaviour = Behaviour.ChargeAndDestroy;
+        spawnPosition = transform.position;
     }
 
     void Start(){
@@ -112,11 +115,16 @@ public class Boss : AdvancedEnemy
                     break;
             case Behaviour.SearchAndSpawn:
                 if(!spawning){
-                    if (timeSincePlayerSeen > 5){
+                    if (timeSincePlayerSeen > 5 &&!PlayerVisible(prey.transform.position)){
                         timeSincePlayerSeen = 0;
                         StartCoroutine(Spawn());
                     }
+                    else if (PlayerVisible(prey.transform.position)){
+                        timeSincePlayerSeen = 0;
+                        ChaseLineOfSight(prey.transform.position, chaseSpeed);
+                    }
                     else{
+                        
                         timeSincePlayerSeen += Time.deltaTime;
                         PatternMovement();
                     }
@@ -222,8 +230,8 @@ public class Boss : AdvancedEnemy
     }
 
     private void DestroyWall(GameObject wall){
-        Rigidbody dropper = wall.AddComponent<Rigidbody>();
-        dropper.useGravity = true;
+        wall.GetComponent<Rigidbody>().isKinematic = false;
+        wall.GetComponent<Rigidbody>().useGravity = true;
         wall.GetComponent<Collider>().enabled = false;
         Destroy(wall, 1f);
 
@@ -292,6 +300,10 @@ public class Boss : AdvancedEnemy
                 yield return null;
         }
         shooting = false;
+    }
+
+    public void SetToSpawn(){
+        this.transform.position = spawnPosition;
     }
         
 }
