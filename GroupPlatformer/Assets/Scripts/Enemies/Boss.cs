@@ -176,9 +176,9 @@ public class Boss : AdvancedEnemy
 
     new private void OnDeath(){
         Instantiate(explosionPrefab, transform.position, transform.rotation);
-        healthBar.GetComponentInParent<Image>().enabled = false;
-        healthBar.GetComponent<Image>().enabled = false;
+        Destroy(healthBar.transform.GetComponentInParent<Image>().gameObject);
         Destroy(gameObject,1.0f);
+        GameObject.Find("WinText").GetComponent<Text>().enabled = true;
     }
 
     IEnumerator Hit(){
@@ -242,8 +242,6 @@ public class Boss : AdvancedEnemy
     private IEnumerator Spawn(){
         spawning = true;
         Rigidbody rigidbody = this.GetComponent<Rigidbody>();
-//        rigidbody.constraints = RigidbodyConstraints.FreezePositionX;
-//        rigidbody.constraints = RigidbodyConstraints.FreezePositionZ;
         rigidbody.useGravity = false;
         rigidbody.isKinematic = true;
         while(this.transform.position.y < liftoffHeight){
@@ -273,11 +271,8 @@ public class Boss : AdvancedEnemy
         }
         rigidbody.useGravity = true;
         rigidbody.isKinematic = false;
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(0.3f);
         spawning = false;
-//        rigidbody.constraints = RigidbodyConstraints.None;
-//        rigidbody.constraints = RigidbodyConstraints.FreezeRotationX;
-//        rigidbody.constraints = RigidbodyConstraints.FreezeRotationZ;
 
 
     }
