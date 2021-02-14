@@ -536,7 +536,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cube: {fileID: 1275296964557573652, guid: 6b44b33c9055e024a98fc3e67464bd7f, type: 3}
-  spawnPointCube: {fileID: 0}
+  spawnPointCube: {fileID: 7200277101820710297}
 --- !u!1 &8860609825975557390
 GameObject:
   m_ObjectHideFlags: 0
@@ -550,7 +550,7 @@ GameObject:
   - component: {fileID: 7184711998130862845}
   - component: {fileID: 5207428136123849476}
   - component: {fileID: 5779201383369709182}
-  - component: {fileID: 2600282529652830732}
+  - component: {fileID: 1555969895202181637}
   m_Layer: 0
   m_Name: GreenButtonSupplier
   m_TagString: Button
@@ -599,7 +599,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 7625275cbabd0b94899594a5ea02dce1, type: 2}
+  - {fileID: 2100000, guid: 0429e956cdc6409459feb07ecb52ee60, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -650,7 +650,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 124
   m_CollisionDetection: 0
---- !u!114 &2600282529652830732
+--- !u!114 &1555969895202181637
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -659,7 +659,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 8860609825975557390}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bfcef340202b819468bba371c96be897, type: 3}
+  m_Script: {fileID: 11500000, guid: fa024f0f1109eca49a505f44582e1945, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  initialPlace: {fileID: 0}
+  initialPlace: {fileID: 8474389991086527397}
