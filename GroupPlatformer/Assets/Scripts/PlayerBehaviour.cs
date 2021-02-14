@@ -53,6 +53,9 @@ public class PlayerBehaviour : MonoBehaviour
     private float forwardInput, sidewaysInput, turnInput, jumpInput, shootInput;
     public Transform spawnpoint;
 
+    private Text livesText;
+    private int lives;
+
 
     void Start(){
         Spawn();
@@ -65,6 +68,9 @@ public class PlayerBehaviour : MonoBehaviour
 
     void Awake()
     {
+        lives = 5;
+        livesText = GameObject.Find("LivesUI").GetComponent<Text>();
+        livesText.text = "Lives: " + lives;
         weaponStatus = WeaponStatus.Unarmed;
         velocity = Vector3.zero;
         forwardInput = sidewaysInput = turnInput = jumpInput = shootInput = 0;
@@ -169,7 +175,8 @@ public class PlayerBehaviour : MonoBehaviour
     }
     public void OnDeath()
     {
-        GameData.Instance.Lives -= 1;
+        lives -= 1;
+        livesText.text = "Lives: " + lives;
         Spawn();
     }
 
