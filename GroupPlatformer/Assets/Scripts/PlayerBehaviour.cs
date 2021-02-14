@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 
 [RequireComponent (typeof (Rigidbody))]
@@ -177,6 +178,8 @@ public class PlayerBehaviour : MonoBehaviour
     {
         lives -= 1;
         livesText.text = "Lives: " + lives;
+        if (lives <= 0)
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         Spawn();
     }
 
