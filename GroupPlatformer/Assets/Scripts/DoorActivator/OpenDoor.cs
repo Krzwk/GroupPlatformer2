@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -9,6 +10,8 @@ public class OpenDoor : MonoBehaviour
 
     bool move = false;
 
+    [SerializeField] private String cubeColor;
+    
     void Update()
     {
         if (move)
@@ -20,7 +23,7 @@ public class OpenDoor : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if(collision.collider.CompareTag("ActivatorCube"))
+        if(collision.collider.CompareTag(cubeColor))
         {
             move = true;
         }

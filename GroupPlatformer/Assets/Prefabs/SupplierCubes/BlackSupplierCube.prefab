@@ -14,8 +14,8 @@ GameObject:
   - component: {fileID: 296946840251209523}
   - component: {fileID: 9105308781121338833}
   m_Layer: 0
-  m_Name: SupplierCube 3
-  m_TagString: OrangeCube
+  m_Name: BlackSupplierCube
+  m_TagString: BlackActivatorCube
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
