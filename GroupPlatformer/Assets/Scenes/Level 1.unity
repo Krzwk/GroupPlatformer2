@@ -3108,7 +3108,7 @@ MonoBehaviour:
     TURN_AXIS: Mouse X
     SHOOT_AXIS: Fire1
   jumpAllowed: 1
-  spawnpoint: {fileID: 1815722572}
+  spawnpoint: {fileID: 1867630763}
 --- !u!54 &1327529966
 Rigidbody:
   m_ObjectHideFlags: 0
