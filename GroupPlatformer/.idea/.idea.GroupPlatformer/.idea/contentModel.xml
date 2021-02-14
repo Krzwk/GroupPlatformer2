@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ContentModelStore">
     <e p="C:\Users\chris\AppData\Local\JetBrains\Rider2020.3\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\chris\AppData\Local\JetBrains\Rider2020.3\resharper-host\Local\Transient\Rider\v203\SolutionCaches\_GroupPlatformer.-805902930.00" t="ExcludeRecursive" />
-    <e p="E:\UnityProjects\GroupPlatformer\GroupPlatformer\GroupPlatformer" t="IncludeRecursive">
+    <e p="C:\Users\chris\AppData\Local\JetBrains\Rider2020.3\resharper-host\Local\Transient\Rider\v203\SolutionCaches\_GroupPlatformer.-1900244674.00" t="ExcludeRecursive" />
+    <e p="E:\UnityProjects\GroupPlatformer\GroupPlatformer2\GroupPlatformer" t="IncludeRecursive">
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
         <e p="Scripts" t="Include">
@@ -11,6 +11,10 @@
           <e p="Checkpoints.cs" t="Include" />
           <e p="DeathZone.cs" t="Include" />
           <e p="DoorActivator" t="Include">
+            <e p="BigDoor" t="Include">
+              <e p="BigDoorOpen.cs" t="Include" />
+              <e p="BigDoorTrigger.cs" t="Include" />
+            </e>
             <e p="OpenDoor.cs" t="Include" />
           </e>
           <e p="Enemies" t="Include">
@@ -31,6 +35,7 @@
           </e>
           <e p="Waypoint.cs" t="Include" />
           <e p="Weapons" t="Include">
+            <e p="BossDart.cs" t="Include" />
             <e p="Dart.cs" t="Include" />
             <e p="Weapon.cs" t="Include" />
           </e>
